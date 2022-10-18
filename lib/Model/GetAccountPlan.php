@@ -189,9 +189,9 @@ class GetAccountPlan implements ModelInterface, ArrayAccess
     const TYPE_SMS = 'sms';
     const TYPE_RESELLER = 'reseller';
     const CREDITS_TYPE_SEND_LIMIT = 'sendLimit';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -207,7 +207,7 @@ class GetAccountPlan implements ModelInterface, ArrayAccess
             self::TYPE_RESELLER,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -219,7 +219,7 @@ class GetAccountPlan implements ModelInterface, ArrayAccess
             self::CREDITS_TYPE_SEND_LIMIT,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
@@ -461,7 +461,7 @@ class GetAccountPlan implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -473,7 +473,7 @@ class GetAccountPlan implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -486,7 +486,7 @@ class GetAccountPlan implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -502,7 +502,7 @@ class GetAccountPlan implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

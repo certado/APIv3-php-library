@@ -169,9 +169,9 @@ class SendReport implements ModelInterface, ArrayAccess
     const LANGUAGE_IT = 'it';
     const LANGUAGE_DE = 'de';
     const LANGUAGE_EN = 'en';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -188,7 +188,7 @@ class SendReport implements ModelInterface, ArrayAccess
             self::LANGUAGE_EN,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
@@ -307,7 +307,7 @@ class SendReport implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -319,7 +319,7 @@ class SendReport implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -332,7 +332,7 @@ class SendReport implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -348,7 +348,7 @@ class SendReport implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

@@ -174,9 +174,9 @@ class CreateAttribute implements ModelInterface, ArrayAccess
     const TYPE_BOOLEAN = 'boolean';
     const TYPE_ID = 'id';
     const TYPE_CATEGORY = 'category';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -193,7 +193,7 @@ class CreateAttribute implements ModelInterface, ArrayAccess
             self::TYPE_CATEGORY,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
@@ -334,7 +334,7 @@ class CreateAttribute implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -346,7 +346,7 @@ class CreateAttribute implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -359,7 +359,7 @@ class CreateAttribute implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -375,7 +375,7 @@ class CreateAttribute implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

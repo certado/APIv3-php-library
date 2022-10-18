@@ -38,7 +38,7 @@ use \SendinBlue\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class GetAccount extends GetExtendedClient 
+class GetAccount extends GetExtendedClient
 {
     const DISCRIMINATOR = null;
 
@@ -166,9 +166,9 @@ class GetAccount extends GetExtendedClient
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
 
     /**
@@ -294,7 +294,7 @@ class GetAccount extends GetExtendedClient
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -306,7 +306,7 @@ class GetAccount extends GetExtendedClient
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -319,7 +319,7 @@ class GetAccount extends GetExtendedClient
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -335,7 +335,7 @@ class GetAccount extends GetExtendedClient
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

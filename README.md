@@ -14,7 +14,7 @@ For more information, please visit [https://account.sendinblue.com/support](http
 
 ## Requirements
 
-PHP 5.6 and later
+PHP 8.1 and later
 
 ## Installation & Usage
 ### Composer

@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace SendinBlue\Client;
+use PHPUnit\Framework\TestCase;
 
 /**
  * AbTestCampaignResultStatisticsTest Class Doc Comment
@@ -38,34 +38,34 @@ namespace SendinBlue\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AbTestCampaignResultStatisticsTest extends \PHPUnit_Framework_TestCase
+class AbTestCampaignResultStatisticsTest extends TestCase
 {
 
     /**
      * Setup before running any test case
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
     }
 
     /**
      * Setup before running each test case
      */
-    public function setUp()
+    public function setUp(): void
     {
     }
 
     /**
      * Clean up after running each test case
      */
-    public function tearDown()
+    public function tearDown(): void
     {
     }
 
     /**
      * Clean up after running all test cases
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
     }
 

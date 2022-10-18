@@ -188,9 +188,9 @@ class GetAttributesAttributes implements ModelInterface, ArrayAccess
     const TYPE_FLOAT = 'float';
     const TYPE_ID = 'id';
     const TYPE_BOOLEAN = 'boolean';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -206,7 +206,7 @@ class GetAttributesAttributes implements ModelInterface, ArrayAccess
             self::CATEGORY__GLOBAL,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -222,7 +222,7 @@ class GetAttributesAttributes implements ModelInterface, ArrayAccess
             self::TYPE_BOOLEAN,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
@@ -436,7 +436,7 @@ class GetAttributesAttributes implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -448,7 +448,7 @@ class GetAttributesAttributes implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -461,7 +461,7 @@ class GetAttributesAttributes implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -477,7 +477,7 @@ class GetAttributesAttributes implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

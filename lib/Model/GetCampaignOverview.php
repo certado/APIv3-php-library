@@ -226,9 +226,9 @@ class GetCampaignOverview implements ModelInterface, ArrayAccess
     const STATUS_QUEUED = 'queued';
     const STATUS_SUSPENDED = 'suspended';
     const STATUS_IN_PROCESS = 'in_process';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -241,7 +241,7 @@ class GetCampaignOverview implements ModelInterface, ArrayAccess
             self::TYPE_TRIGGER,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -258,7 +258,7 @@ class GetCampaignOverview implements ModelInterface, ArrayAccess
             self::STATUS_IN_PROCESS,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
@@ -678,7 +678,7 @@ class GetCampaignOverview implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -690,7 +690,7 @@ class GetCampaignOverview implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -703,7 +703,7 @@ class GetCampaignOverview implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -719,7 +719,7 @@ class GetCampaignOverview implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

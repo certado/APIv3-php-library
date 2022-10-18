@@ -190,9 +190,9 @@ class GetWebhook implements ModelInterface, ArrayAccess
 
     const TYPE_MARKETING = 'marketing';
     const TYPE_TRANSAC = 'transac';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -205,7 +205,7 @@ class GetWebhook implements ModelInterface, ArrayAccess
             self::TYPE_TRANSAC,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
@@ -467,7 +467,7 @@ class GetWebhook implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -479,7 +479,7 @@ class GetWebhook implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -492,7 +492,7 @@ class GetWebhook implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -508,7 +508,7 @@ class GetWebhook implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

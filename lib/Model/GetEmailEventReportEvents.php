@@ -222,9 +222,9 @@ class GetEmailEventReportEvents implements ModelInterface, ArrayAccess
     const EVENT_UNSUBSCRIBED = 'unsubscribed';
     const EVENT_ERROR = 'error';
     const EVENT_LOADED_BY_PROXY = 'loadedByProxy';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -249,7 +249,7 @@ class GetEmailEventReportEvents implements ModelInterface, ArrayAccess
             self::EVENT_LOADED_BY_PROXY,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
@@ -602,7 +602,7 @@ class GetEmailEventReportEvents implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -614,7 +614,7 @@ class GetEmailEventReportEvents implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -627,7 +627,7 @@ class GetEmailEventReportEvents implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -643,7 +643,7 @@ class GetEmailEventReportEvents implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

@@ -198,9 +198,9 @@ class RequestContactExportCustomContactFilter implements ModelInterface, ArrayAc
     const ACTION_FOR_SMS_CAMPAIGNS_HARD_BOUNCES = 'hardBounces';
     const ACTION_FOR_SMS_CAMPAIGNS_SOFT_BOUNCES = 'softBounces';
     const ACTION_FOR_SMS_CAMPAIGNS_UNSUBSCRIBED = 'unsubscribed';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -215,7 +215,7 @@ class RequestContactExportCustomContactFilter implements ModelInterface, ArrayAc
             self::ACTION_FOR_CONTACTS_UNSUBSCRIBED_PER_LIST,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -233,7 +233,7 @@ class RequestContactExportCustomContactFilter implements ModelInterface, ArrayAc
             self::ACTION_FOR_EMAIL_CAMPAIGNS_SOFT_BOUNCES,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -247,7 +247,7 @@ class RequestContactExportCustomContactFilter implements ModelInterface, ArrayAc
             self::ACTION_FOR_SMS_CAMPAIGNS_UNSUBSCRIBED,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
@@ -497,7 +497,7 @@ class RequestContactExportCustomContactFilter implements ModelInterface, ArrayAc
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -509,7 +509,7 @@ class RequestContactExportCustomContactFilter implements ModelInterface, ArrayAc
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -522,7 +522,7 @@ class RequestContactExportCustomContactFilter implements ModelInterface, ArrayAc
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -538,7 +538,7 @@ class RequestContactExportCustomContactFilter implements ModelInterface, ArrayAc
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

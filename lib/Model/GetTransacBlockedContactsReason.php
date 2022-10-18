@@ -170,9 +170,9 @@ class GetTransacBlockedContactsReason implements ModelInterface, ArrayAccess
     const CODE_UNSUBSCRIBED_VIA_API = 'unsubscribedViaApi';
     const CODE_HARD_BOUNCE = 'hardBounce';
     const CODE_CONTACT_FLAGGED_AS_SPAM = 'contactFlaggedAsSpam';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -189,7 +189,7 @@ class GetTransacBlockedContactsReason implements ModelInterface, ArrayAccess
             self::CODE_CONTACT_FLAGGED_AS_SPAM,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
@@ -305,7 +305,7 @@ class GetTransacBlockedContactsReason implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -317,7 +317,7 @@ class GetTransacBlockedContactsReason implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -330,7 +330,7 @@ class GetTransacBlockedContactsReason implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -346,7 +346,7 @@ class GetTransacBlockedContactsReason implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
