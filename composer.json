@@ -1,6 +1,6 @@
 {
-  "name": "certado/sendinblue-api-v3-sdk",
-  "description": "SendinBlue provided RESTFul API V3 php library",
+  "name": "sendinblue/api-v3-sdk",
+  "description": "Official SendinBlue provided RESTFul API V3 php library",
   "keywords": [
     "sendinblue",
     "swagger",
@@ -8,8 +8,15 @@
     "sdk",
     "api"
   ],
-  "homepage": "https://github.com/certado/APIv3-php-library",
+  "homepage": "https://github.com/sendinblue/APIv3-php-library",
   "license": "MIT",
+  "authors": [
+    {
+      "name": "SendinBlue Developers",
+      "email": "contact@sendinblue.com",
+      "homepage": "https://www.sendinblue.com/"
+    }
+  ],
   "require": {
     "php": ">=8.1",
     "guzzlehttp/guzzle": "^7.5.0",
@@ -30,6 +37,11 @@
   "autoload-dev": {
     "psr-4": {
       "SendinBlue\\Client\\": "test/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "8.x.x-dev"
     }
   }
 }
